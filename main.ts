@@ -12,12 +12,16 @@ const createWindow = () => {
         ...winState.winOptions,
         webPreferences: {
             preload: path.resolve(__dirname, './preload/index.ts')
-        }
+        },
+        show: false
     });
     win.loadURL("http://localhost:5173");
 
     win.webContents.openDevTools();
     winState.manage(win);
+    win.on('ready-to-show', () => {
+        win.show();
+    })
 }
 
 app.whenReady().then(() => {
