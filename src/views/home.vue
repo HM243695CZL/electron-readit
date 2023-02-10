@@ -1,17 +1,14 @@
 <template>
   <div class="home-container">
     <SearchBar />
-    home
+    <Dialog />
   </div>
 </template>
 
-<script lang='ts'>
+<script lang='ts' setup>
   import SearchBar from './components/SearchBar.vue';
-  export default {
-    components: {
-      SearchBar
-    }
-  }
+  import Dialog from './components/Dialog.vue';
+
 </script>
 
 <style scoped>

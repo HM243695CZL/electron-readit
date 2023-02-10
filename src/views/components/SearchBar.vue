@@ -11,12 +11,13 @@
   </div>
 </template>
 
-<script lang='ts'>
-import {defineComponent} from 'vue';
+<script lang='ts' setup>
+  const handleClick = () => {
 
-export default defineComponent({
-  name: "SearchBar"
-})
+  };
+  const search = () => {
+
+  }
 </script>
 
 <style lang="less">
